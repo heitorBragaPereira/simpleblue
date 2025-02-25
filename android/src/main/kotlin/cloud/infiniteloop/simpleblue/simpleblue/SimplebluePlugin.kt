@@ -272,7 +272,7 @@ class SimplebluePlugin : FlutterPlugin,
                 }
                 BluetoothAdapter.ACTION_DISCOVERY_STARTED -> {
                     Log.d(TAG, "Bluetooth Discovery started")
-
+                    devices.clear()
                     eventSink?.success(
                         mapOf(
                             "type" to "scanningState",
